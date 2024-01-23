@@ -2,6 +2,10 @@ import { DB } from "../lib/db";
 import { sendMail } from "../lib/sendMail";
 import { Request, Response } from "express";
 
+import { Queue } from "bullmq";
+
+const emailQueue = new Queue("email-queue");
+
 const User = new DB();
 
 export const handleGetAllUsers = (req: Request, res: Response) => {
@@ -31,17 +35,18 @@ export const createNewUser = async (req: Request, res: Response) => {
     // create a new user in db
     const user = User.createUser(email, password);
 
-    await sendMail({
+    await emailQueue.add(`${Date.now()}`, {
       from: "demo@gmail.com",
       to: user.email,
       sub: "New email verification mail sent",
     });
 
+    // await sendMail();
+
     return res.status(201).json({
       user,
       message: "new user created",
     });
-    
   } catch (error) {
     console.log(error);
     return res.status(500).json({
