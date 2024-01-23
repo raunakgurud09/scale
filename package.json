@@ -1,8 +1,9 @@
 {
   "name": "scale-queues",
   "version": "1.0.0",
-  "private":true,
-  "workspaces":[
-    "app/*"
+  "private": true,
+  "workspaces": [
+    "app/*",
+    "package/*"
   ]
 }
