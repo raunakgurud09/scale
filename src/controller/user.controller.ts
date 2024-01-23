@@ -41,6 +41,7 @@ export const createNewUser = async (req: Request, res: Response) => {
       user,
       message: "new user created",
     });
+    
   } catch (error) {
     console.log(error);
     return res.status(500).json({

@@ -12,4 +12,4 @@ router.get("/health", (req, res) => {
 
 router.route("/user").get(handleGetAllUsers).post(createNewUser);
 
-export { router as mainRouter };
+export { router as Router };
