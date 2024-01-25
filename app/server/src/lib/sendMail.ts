@@ -1,4 +1,5 @@
-import { sleep } from "../utils/sleep";
+import shared from "shared";
+// import { sleep } from "../utils/sleep";
 
 export const sendMail = async ({
   from,
