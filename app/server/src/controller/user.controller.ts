@@ -41,7 +41,6 @@ export const createNewUser = async (req: Request, res: Response) => {
       sub: "New email verification mail sent",
     });
 
-
     return res.status(201).json({
       user,
       message: "new user created",

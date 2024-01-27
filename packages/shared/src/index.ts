@@ -5,4 +5,4 @@ export const sleep = (ms: number = 1000) =>
     }, ms);
   });
 
-export type sleep = (ms: number) => Promise<void>
+export type sleep = (ms: number) => Promise<void>;

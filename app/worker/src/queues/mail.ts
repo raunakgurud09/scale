@@ -14,7 +14,7 @@ const emailWorker = new Worker(
   },
   {
     connection: {
-      host: 'localhost',
+      host: "localhost",
       port: 6379,
     },
   }
