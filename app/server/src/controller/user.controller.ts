@@ -34,13 +34,13 @@ export const createNewUser = async (req: Request, res: Response) => {
     // create a new user in db
     const user = User.createUser(email, password);
 
+    // await sendMail();
     await emailQueue.add(`${Date.now()}`, {
       from: "demo@gmail.com",
       to: user.email,
       sub: "New email verification mail sent",
     });
 
-    // await sendMail();
 
     return res.status(201).json({
       user,
