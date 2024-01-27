@@ -1,12 +1,30 @@
 {
   "name": "scale",
   "version": "1.0.0",
+  "repository": "https://github.com/raunakgurud09/scale.git",
+  "author": "Raunak Gurud <raunakgurud2121@gmail.com>",
+  "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "tsc --build --verbose"
+    "build": "tsc --build --verbose",
+    "lint": "lint-staged"
   },
   "workspaces": [
     "app/*",
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.0-alpha.0",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4"
+  },
+  "lint-staged": {
+    "**/**/*.{js,ts,json,html,css}": "prettier --write",
+    "**/*.ts": "eslint"
+  },
+  "dependencies": {
+    "husky": "^9.0.6"
+  }
 }
