@@ -3,10 +3,12 @@ import {
   createNewUser,
   handleGetAllUsers,
 } from "../controller/user.controller";
+import { sleep } from "@scale/shared";
 
 const router = Router();
 
-router.get("/health", (req, res) => {
+router.get("/health", async (req, res) => {
+  await sleep();
   res.status(200).json({ message: "health route working" });
 });
 

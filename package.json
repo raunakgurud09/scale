@@ -2,8 +2,11 @@
   "name": "scale",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "build": "tsc --build --verbose"
+  },
   "workspaces": [
     "app/*",
-    "package/*"
+    "packages/*"
   ]
 }

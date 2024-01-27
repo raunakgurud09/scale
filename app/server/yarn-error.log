@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Raunak\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js test --listTests --json --watchAll=false
+  C:\Program Files\nodejs\node.exe C:\Users\Raunak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js add @scale/shared
 
 PATH: 
   C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Users\Raunak\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\MinGW\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Sublime Text;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\MongoDB;C:\Program Files\Go\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\starship\bin\;C:\Users\Raunak\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\Raunak\AppData\Local\Programs\Python\Python312\;C:\Users\Raunak\.cargo\bin;C:\Users\Raunak\AppData\Local\pnpm;C:\Users\Raunak\AppData\Local\Microsoft\WindowsApps;C:\Users\Raunak\AppData\Roaming\npm;C:\Users\Raunak\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Raunak\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\MongoDB\;C:\Users\Raunak\go\bin
@@ -14,16 +14,21 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: D:\workspace\coding\web\backend\scale-queues\package.json: Unexpected end of JSON input
-      at JSON.parse (<anonymous>)
-      at C:\Users\Raunak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1629:59
-      at Generator.next (<anonymous>)
-      at step (C:\Users\Raunak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
-      at C:\Users\Raunak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+  Error: https://registry.yarnpkg.com/@scale%2fshared: Not found
+      at params.callback [as _callback] (C:\Users\Raunak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
+      at self.callback (C:\Users\Raunak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
+      at Request.emit (node:events:514:28)
+      at Request.<anonymous> (C:\Users\Raunak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141862:10)
+      at Request.emit (node:events:514:28)
+      at IncomingMessage.<anonymous> (C:\Users\Raunak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141784:12)
+      at Object.onceWrapper (node:events:628:28)
+      at IncomingMessage.emit (node:events:526:35)
+      at endReadableNT (node:internal/streams/readable:1589:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 npm manifest: 
   {
-    "name": "scale-queues",
+    "name": "server",
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
@@ -36,7 +41,8 @@ npm manifest:
     "dependencies": {
       "bullmq": "^5.1.5",
       "cross-env": "^7.0.3",
-      "express": "^4.18.2"
+      "express": "^4.18.2",
+      "@scale/shared": "*"
     },
     "devDependencies": {
       "@types/express": "^4.17.21",
@@ -1423,9 +1429,9 @@ Lockfile:
     integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
   
   electron-to-chromium@^1.4.601:
-    version "1.4.642"
-    resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.642.tgz#eb380fa8b58e515c641d642ba452fa2c453c2e4f"
-    integrity sha512-M4+u22ZJGpk4RY7tne6W+APkZhnnhmAH48FNl8iEFK2lEgob+U5rUQsIqQhvAwCXYpfd3H20pHK/ENsCvwTbsA==
+    version "1.4.643"
+    resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.643.tgz#081a20c5534db91e66ef094f68624960f674768f"
+    integrity sha512-QHscvvS7gt155PtoRC0dR2ilhL8E9LHhfTQEq1uD5AL0524rBLAwpAREFH06f87/e45B9XkR6Ki5dbhbCsVEIg==
   
   emittery@^0.13.1:
     version "0.13.1"

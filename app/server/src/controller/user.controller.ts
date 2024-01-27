@@ -1,5 +1,4 @@
 import { DB } from "../lib/db";
-import { sendMail } from "../lib/sendMail";
 import { Request, Response } from "express";
 
 import { Queue } from "bullmq";
