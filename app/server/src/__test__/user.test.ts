@@ -22,7 +22,7 @@ describe("User", () => {
 
   describe("GET /user", () => {
     it("return 200", async () => {
-      const { statusCode, body } = await supertest(app).get("/api/user");
+      const { statusCode } = await supertest(app).get("/api/user");
 
       expect(statusCode).toBe(200);
     });

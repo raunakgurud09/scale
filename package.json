@@ -7,7 +7,12 @@
   "private": true,
   "scripts": {
     "build": "tsc --build --verbose",
-    "lint": "lint-staged"
+    "lint": "lint-staged",
+    "lint:report": "npx eslint . --format json --output-file ../../lint-results/web.json",
+    "style:all": "tsc && npm run style:lint && npm run style:prettier",
+    "style:lint": "eslint **/*.ts",
+    "style:prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",
+    "pretty": "prettier --write '**/*.{js,jsx,ts,tsx}'"
   },
   "workspaces": [
     "app/*",

@@ -10,13 +10,13 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "rootDir": "./src",
-    "outDir": "./build"
+    "outDir": "./build",
   },
-  "files": [
-  ],
+  "files": [],
   "references": [
     {
-      "path": "./packages/shared"
-    }
-  ]
+      "path": "./packages/shared",
+    },
+  ],
+  "exclude": ["node_modules", "dist"],
 }

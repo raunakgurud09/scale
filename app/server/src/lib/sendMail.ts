@@ -1,4 +1,3 @@
-
 import { sleep } from "@scale/shared";
 
 export const sendMail = async ({
@@ -12,4 +11,5 @@ export const sendMail = async ({
 }) => {
   // Waiting to send mail mock time
   await sleep(2 * 1000);
+  console.log(from, to, sub);
 };
