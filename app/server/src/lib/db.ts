@@ -1,15 +1,13 @@
-
 export type user = {
   email: string;
   password: string;
 };
 
-
 export class DB {
   private users: user[] | null = [];
 
   constructor() {
-    console.log("db created");
+    console.log("DB created");
   }
 
   public createUser(email: string, password: string) {
